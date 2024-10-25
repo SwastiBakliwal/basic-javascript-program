@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binary search</title>
+</head>
+<body>
+    <div><h2>Find the number </h2>
+    <input id = "in" type="number" placeholder="Find the no. "></input><br>
+    <button type ="submit" onclick="binary()">Submit</button><br></div>
+    <script>
+        function binary()
+        {
+            let s = 0 , m ,e ,search, i , flag=0;
+            let a = [10,15,18,32,88,93]
+            e = a.length-1;
+           search = document.getElementById("in").value
+            for( i = 0 ; i<a.length ; i++)
+        {
+            m = parseInt((s+e)/2);
+            if(search==a[m])
+        {
+            flag =1
+            break
+        }
+        else if (search>a[m])
+        {
+            s = m+1
+            
+        }
+        else
+        {
+            e= m-1
+        
+        }
+        }
+        if(flag ==1)
+        {
+          document.write("number is found")
+        }
+        else
+        {
+            document.write("number is not found")
+        }
+        }
+       // binary();
+    </script>
+</body>
+</html>
