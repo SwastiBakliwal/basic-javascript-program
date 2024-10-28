@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><h2>Login</h2>
+        <input id = "email" type="email" placeholder="Enter your email"></input><br>
+        <input id="pass" type="password" placeholder="Enter your password"></input><br>
+        <button type ="submit" onclick="check()">Submit</button><br></div>
+    <script>
+      function check()
+      {
+         let p = document.getElementById("pass").value;
+         if(p==1234)
+         {
+            document.write("Login Successfully")
+         }
+         else
+         {
+            document.write("please correct the password")
+         }
+      }    
+    </script>
+</body>
+</html>
