@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 1 code</title>
+</head>
+<body>
+    <center>
+        <img id="main" src="Images/img1.jpg" width="350" height="350"/>
+        <br><br><br>
+        <img onclick="changeImage(this)" id="first" src="Images/img2.jpg" width="100" height="100"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img onclick="changeImage(this)" id="second" src="Images/img3.jpg" width="100" height="100"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        <img onclick="changeImage(this)" id="third" src="Images/img4.jpg" width="100" height="100"/>&nbsp;&nbsp;&nbsp;&nbsp;
+    </center>
+    <script>
+        function changeImage(currentImage){
+           var mainImage = document.getElementById("main");
+         
+           var temp = mainImage.src;
+           mainImage.src = currentImage.src;
+           currentImage.src = temp;
+        }
+    </script>
+</body>
+</html>
