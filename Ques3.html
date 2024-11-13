@@ -1,0 +1,44 @@
+<!--3. Write a program to find total number of
+alphabets, digits or special character in a string-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find total numbers of characters</title>
+</head>
+<body>
+<script>
+        function countCharacters(str) {
+    let alphabets = 0, digits = 0, specialCharacters = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if ((char >= 'A' && char <= 'Z') || (char >= 'a' && char <= 'z')) {
+            alphabets++;
+        } else if (char >= '0' && char <= '9') {
+            digits++;
+        } else {
+            specialCharacters++;
+        }
+    }
+
+    return {
+        alphabets,
+        digits,
+        specialCharacters
+    };
+}
+
+// Example usage:
+let inputString = "Hello123!@#";
+let result = countCharacters(inputString);
+console.log(`Alphabets: ${result.alphabets}`);
+console.log(`Digits: ${result.digits}`);
+console.log(`Special Characters: ${result.specialCharacters}`);
+
+
+</script>
+</body>
+</html>
